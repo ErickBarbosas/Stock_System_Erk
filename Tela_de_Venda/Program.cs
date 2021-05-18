@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StockSystemErk
+namespace Tela_de_Venda
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace StockSystemErk
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Default());
+            Application.Run(new Form1());
         }
     }
 }
