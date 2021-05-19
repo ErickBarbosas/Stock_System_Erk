@@ -28,47 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             this.btnTelaVenda = new System.Windows.Forms.Button();
             this.btnCaderneta = new System.Windows.Forms.Button();
             this.btnControleEstoque = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFaturamento = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTelaVenda
             // 
-            this.btnTelaVenda.Location = new System.Drawing.Point(369, 116);
+            this.btnTelaVenda.Font = new System.Drawing.Font("Californian FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTelaVenda.ForeColor = System.Drawing.Color.Black;
+            this.btnTelaVenda.Image = ((System.Drawing.Image)(resources.GetObject("btnTelaVenda.Image")));
+            this.btnTelaVenda.Location = new System.Drawing.Point(342, 116);
             this.btnTelaVenda.Name = "btnTelaVenda";
-            this.btnTelaVenda.Size = new System.Drawing.Size(119, 60);
+            this.btnTelaVenda.Size = new System.Drawing.Size(111, 60);
             this.btnTelaVenda.TabIndex = 0;
-            this.btnTelaVenda.Text = "Fazer Venda";
             this.btnTelaVenda.UseVisualStyleBackColor = true;
             this.btnTelaVenda.Click += new System.EventHandler(this.btnTelaVenda_Click);
             // 
             // btnCaderneta
             // 
-            this.btnCaderneta.Location = new System.Drawing.Point(369, 214);
+            this.btnCaderneta.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCaderneta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCaderneta.Font = new System.Drawing.Font("Californian FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaderneta.ForeColor = System.Drawing.Color.Black;
+            this.btnCaderneta.Location = new System.Drawing.Point(342, 214);
             this.btnCaderneta.Name = "btnCaderneta";
-            this.btnCaderneta.Size = new System.Drawing.Size(119, 58);
+            this.btnCaderneta.Size = new System.Drawing.Size(111, 60);
             this.btnCaderneta.TabIndex = 1;
             this.btnCaderneta.Text = "Caderneta ";
-            this.btnCaderneta.UseVisualStyleBackColor = true;
+            this.btnCaderneta.UseVisualStyleBackColor = false;
             this.btnCaderneta.Click += new System.EventHandler(this.btnCaderneta_Click);
             // 
             // btnControleEstoque
             // 
-            this.btnControleEstoque.Location = new System.Drawing.Point(112, 116);
+            this.btnControleEstoque.Font = new System.Drawing.Font("Californian FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControleEstoque.ForeColor = System.Drawing.Color.Black;
+            this.btnControleEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnControleEstoque.Image")));
+            this.btnControleEstoque.Location = new System.Drawing.Point(137, 116);
             this.btnControleEstoque.Name = "btnControleEstoque";
-            this.btnControleEstoque.Size = new System.Drawing.Size(106, 60);
+            this.btnControleEstoque.Size = new System.Drawing.Size(111, 60);
             this.btnControleEstoque.TabIndex = 2;
-            this.btnControleEstoque.Text = "Controle de Estoque ";
             this.btnControleEstoque.UseVisualStyleBackColor = true;
             this.btnControleEstoque.Click += new System.EventHandler(this.btnControleEstoque_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(238, 58);
+            this.label1.Location = new System.Drawing.Point(251, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 3;
@@ -76,19 +87,41 @@
             // 
             // btnFaturamento
             // 
-            this.btnFaturamento.Location = new System.Drawing.Point(112, 214);
+            this.btnFaturamento.Font = new System.Drawing.Font("Californian FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFaturamento.ForeColor = System.Drawing.Color.Black;
+            this.btnFaturamento.Location = new System.Drawing.Point(137, 214);
             this.btnFaturamento.Name = "btnFaturamento";
-            this.btnFaturamento.Size = new System.Drawing.Size(106, 58);
+            this.btnFaturamento.Size = new System.Drawing.Size(111, 60);
             this.btnFaturamento.TabIndex = 4;
             this.btnFaturamento.Text = "Faturamento ";
             this.btnFaturamento.UseVisualStyleBackColor = true;
             this.btnFaturamento.Click += new System.EventHandler(this.btnFaturamento_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(134, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Controle de Venda";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(339, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Controle de Venda";
             // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFaturamento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnControleEstoque);
@@ -109,6 +142,8 @@
         private System.Windows.Forms.Button btnControleEstoque;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFaturamento;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
