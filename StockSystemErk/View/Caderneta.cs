@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tela_de_Venda
+namespace StockSystemErk.View
 {
-    public partial class Form1 : Form
+    public partial class Caderneta : Form
     {
-        public Form1()
+        public Caderneta()
         {
             InitializeComponent();
         }

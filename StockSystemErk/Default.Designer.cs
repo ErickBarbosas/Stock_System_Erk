@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnTelaVenda = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCaderneta = new System.Windows.Forms.Button();
             this.btnControleEstoque = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFaturamento = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTelaVenda
@@ -43,15 +43,17 @@
             this.btnTelaVenda.TabIndex = 0;
             this.btnTelaVenda.Text = "Fazer Venda";
             this.btnTelaVenda.UseVisualStyleBackColor = true;
+            this.btnTelaVenda.Click += new System.EventHandler(this.btnTelaVenda_Click);
             // 
-            // button2
+            // btnCaderneta
             // 
-            this.button2.Location = new System.Drawing.Point(369, 214);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 58);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCaderneta.Location = new System.Drawing.Point(369, 214);
+            this.btnCaderneta.Name = "btnCaderneta";
+            this.btnCaderneta.Size = new System.Drawing.Size(119, 58);
+            this.btnCaderneta.TabIndex = 1;
+            this.btnCaderneta.Text = "Caderneta ";
+            this.btnCaderneta.UseVisualStyleBackColor = true;
+            this.btnCaderneta.Click += new System.EventHandler(this.btnCaderneta_Click);
             // 
             // btnControleEstoque
             // 
@@ -66,33 +68,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 58);
+            this.label1.Location = new System.Drawing.Point(238, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "Controle de Venda";
             // 
-            // button4
+            // btnFaturamento
             // 
-            this.button4.Location = new System.Drawing.Point(112, 214);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 58);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Faturamento ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFaturamento.Location = new System.Drawing.Point(112, 214);
+            this.btnFaturamento.Name = "btnFaturamento";
+            this.btnFaturamento.Size = new System.Drawing.Size(106, 58);
+            this.btnFaturamento.TabIndex = 4;
+            this.btnFaturamento.Text = "Faturamento ";
+            this.btnFaturamento.UseVisualStyleBackColor = true;
+            this.btnFaturamento.Click += new System.EventHandler(this.btnFaturamento_Click);
             // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 450);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnFaturamento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnControleEstoque);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCaderneta);
             this.Controls.Add(this.btnTelaVenda);
             this.Name = "Default";
-            this.Text = "Form1";
+            this.Text = "Stock System Erk";
             this.Load += new System.EventHandler(this.Default_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,10 +105,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnTelaVenda;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCaderneta;
         private System.Windows.Forms.Button btnControleEstoque;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnFaturamento;
     }
 }
 
