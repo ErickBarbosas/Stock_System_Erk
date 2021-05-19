@@ -46,9 +46,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(389, 214);
+            this.button2.Location = new System.Drawing.Point(369, 214);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(119, 58);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -61,6 +61,7 @@
             this.btnControleEstoque.TabIndex = 2;
             this.btnControleEstoque.Text = "Controle de Estoque ";
             this.btnControleEstoque.UseVisualStyleBackColor = true;
+            this.btnControleEstoque.Click += new System.EventHandler(this.btnControleEstoque_Click);
             // 
             // label1
             // 
@@ -75,9 +76,9 @@
             // 
             this.button4.Location = new System.Drawing.Point(112, 214);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(106, 58);
             this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
+            this.button4.Text = "Faturamento ";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Default
@@ -92,6 +93,7 @@
             this.Controls.Add(this.btnTelaVenda);
             this.Name = "Default";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Default_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
