@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockSystemErk.View;
 
 namespace StockSystemErk.View
 {
@@ -15,6 +16,13 @@ namespace StockSystemErk.View
         public Controle_de_Estoque()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastraProduto_Click(object sender, EventArgs e)
+        {
+            Cadastro_Produto cadastrarProduto = new Cadastro_Produto();
+
+                cadastrarProduto.Show();
         }
     }
 }

@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCadastraProduto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,11 +69,23 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Estoque:";
             // 
+            // btnCadastraProduto
+            // 
+            this.btnCadastraProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.btnCadastraProduto.Location = new System.Drawing.Point(624, 116);
+            this.btnCadastraProduto.Name = "btnCadastraProduto";
+            this.btnCadastraProduto.Size = new System.Drawing.Size(132, 32);
+            this.btnCadastraProduto.TabIndex = 4;
+            this.btnCadastraProduto.Text = "Cadastrar Novo Produto";
+            this.btnCadastraProduto.UseVisualStyleBackColor = true;
+            this.btnCadastraProduto.Click += new System.EventHandler(this.btnCadastraProduto_Click);
+            // 
             // Controle_de_Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCadastraProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -91,5 +104,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCadastraProduto;
     }
 }
