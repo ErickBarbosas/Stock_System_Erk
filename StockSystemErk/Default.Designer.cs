@@ -34,7 +34,6 @@
             this.btnControleEstoque = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFaturamento = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -47,6 +46,7 @@
             this.btnTelaVenda.Name = "btnTelaVenda";
             this.btnTelaVenda.Size = new System.Drawing.Size(111, 60);
             this.btnTelaVenda.TabIndex = 0;
+            this.btnTelaVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTelaVenda.UseVisualStyleBackColor = true;
             this.btnTelaVenda.Click += new System.EventHandler(this.btnTelaVenda_Click);
             // 
@@ -61,19 +61,23 @@
             this.btnCaderneta.Size = new System.Drawing.Size(111, 60);
             this.btnCaderneta.TabIndex = 1;
             this.btnCaderneta.Text = "Caderneta ";
+            this.btnCaderneta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCaderneta.UseVisualStyleBackColor = false;
             this.btnCaderneta.Click += new System.EventHandler(this.btnCaderneta_Click);
             // 
             // btnControleEstoque
             // 
-            this.btnControleEstoque.Font = new System.Drawing.Font("Californian FB", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControleEstoque.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControleEstoque.ForeColor = System.Drawing.Color.Black;
             this.btnControleEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnControleEstoque.Image")));
+            this.btnControleEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnControleEstoque.Location = new System.Drawing.Point(137, 116);
             this.btnControleEstoque.Name = "btnControleEstoque";
-            this.btnControleEstoque.Size = new System.Drawing.Size(111, 60);
+            this.btnControleEstoque.Size = new System.Drawing.Size(162, 60);
             this.btnControleEstoque.TabIndex = 2;
-            this.btnControleEstoque.UseVisualStyleBackColor = true;
+            this.btnControleEstoque.Text = "Estoque";
+            this.btnControleEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnControleEstoque.UseVisualStyleBackColor = false;
             this.btnControleEstoque.Click += new System.EventHandler(this.btnControleEstoque_Click);
             // 
             // label1
@@ -94,17 +98,9 @@
             this.btnFaturamento.Size = new System.Drawing.Size(111, 60);
             this.btnFaturamento.TabIndex = 4;
             this.btnFaturamento.Text = "Faturamento ";
+            this.btnFaturamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFaturamento.UseVisualStyleBackColor = true;
             this.btnFaturamento.Click += new System.EventHandler(this.btnFaturamento_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(134, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Controle de Venda";
             // 
             // label3
             // 
@@ -121,7 +117,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 450);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFaturamento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnControleEstoque);
@@ -142,7 +137,6 @@
         private System.Windows.Forms.Button btnControleEstoque;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFaturamento;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }
 }
