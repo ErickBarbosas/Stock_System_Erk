@@ -16,5 +16,15 @@ namespace StockSystemErk.View
         {
             InitializeComponent();
         }
+
+        private void Cadastro_Produto_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
