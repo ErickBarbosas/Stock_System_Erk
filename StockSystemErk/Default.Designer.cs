@@ -39,6 +39,9 @@
             // 
             // btnTelaVenda
             // 
+            this.btnTelaVenda.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTelaVenda.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTelaVenda.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.btnTelaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTelaVenda.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTelaVenda.ForeColor = System.Drawing.Color.Black;
@@ -51,12 +54,14 @@
             this.btnTelaVenda.Text = "Vender";
             this.btnTelaVenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTelaVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTelaVenda.UseVisualStyleBackColor = true;
+            this.btnTelaVenda.UseVisualStyleBackColor = false;
             this.btnTelaVenda.Click += new System.EventHandler(this.btnTelaVenda_Click);
             // 
             // btnCaderneta
             // 
-            this.btnCaderneta.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCaderneta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCaderneta.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCaderneta.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCaderneta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCaderneta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaderneta.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,12 +80,15 @@
             // 
             // btnControleEstoque
             // 
+            this.btnControleEstoque.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnControleEstoque.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnControleEstoque.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.btnControleEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnControleEstoque.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControleEstoque.ForeColor = System.Drawing.Color.Black;
             this.btnControleEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnControleEstoque.Image")));
             this.btnControleEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControleEstoque.Location = new System.Drawing.Point(51, 169);
+            this.btnControleEstoque.Location = new System.Drawing.Point(67, 169);
             this.btnControleEstoque.Name = "btnControleEstoque";
             this.btnControleEstoque.Size = new System.Drawing.Size(184, 60);
             this.btnControleEstoque.TabIndex = 2;
@@ -107,19 +115,22 @@
             // 
             // btnFaturamento
             // 
+            this.btnFaturamento.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFaturamento.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnFaturamento.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.btnFaturamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFaturamento.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFaturamento.ForeColor = System.Drawing.Color.Black;
             this.btnFaturamento.Image = ((System.Drawing.Image)(resources.GetObject("btnFaturamento.Image")));
             this.btnFaturamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFaturamento.Location = new System.Drawing.Point(51, 280);
+            this.btnFaturamento.Location = new System.Drawing.Point(67, 280);
             this.btnFaturamento.Name = "btnFaturamento";
             this.btnFaturamento.Size = new System.Drawing.Size(184, 60);
             this.btnFaturamento.TabIndex = 4;
             this.btnFaturamento.Text = "Faturamento ";
             this.btnFaturamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFaturamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFaturamento.UseVisualStyleBackColor = true;
+            this.btnFaturamento.UseVisualStyleBackColor = false;
             this.btnFaturamento.Click += new System.EventHandler(this.btnFaturamento_Click);
             // 
             // label2
@@ -144,6 +155,7 @@
             this.Controls.Add(this.btnControleEstoque);
             this.Controls.Add(this.btnCaderneta);
             this.Controls.Add(this.btnTelaVenda);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Default";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Default_Load);
