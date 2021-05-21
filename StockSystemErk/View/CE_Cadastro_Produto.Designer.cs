@@ -1,6 +1,6 @@
 ﻿namespace StockSystemErk.View
 {
-    partial class Cadastro_Produto
+    partial class CE_Cadastro_Produto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CE_Cadastro_Produto));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -131,10 +132,11 @@
             this.label5.Text = "Categoria do produto";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // Cadastro_Produto
+            // CE_Cadastro_Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(578, 313);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
@@ -146,7 +148,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Cadastro_Produto";
+            this.Name = "CE_Cadastro_Produto";
             this.Text = "Cadastro_Produto";
             this.Load += new System.EventHandler(this.Cadastro_Produto_Load);
             this.ResumeLayout(false);

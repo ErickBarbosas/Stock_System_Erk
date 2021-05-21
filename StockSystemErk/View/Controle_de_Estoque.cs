@@ -20,7 +20,7 @@ namespace StockSystemErk.View
 
         private void btnCadastraProduto_Click(object sender, EventArgs e)
         {
-            Cadastro_Produto cadastrarProduto = new Cadastro_Produto();
+            CE_Cadastro_Produto cadastrarProduto = new CE_Cadastro_Produto();
 
                 cadastrarProduto.Show();
         }

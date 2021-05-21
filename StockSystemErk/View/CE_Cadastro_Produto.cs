@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StockSystemErk.View
 {
-    public partial class Cadastro_Produto : Form
+    public partial class CE_Cadastro_Produto : Form
     {
-        public Cadastro_Produto()
+        public CE_Cadastro_Produto()
         {
             InitializeComponent();
         }

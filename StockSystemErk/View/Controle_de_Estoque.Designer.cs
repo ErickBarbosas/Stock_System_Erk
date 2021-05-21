@@ -34,7 +34,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastraProduto = new System.Windows.Forms.Button();
-            this.btBuscarProduto = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,15 +89,32 @@
             this.btnCadastraProduto.UseVisualStyleBackColor = true;
             this.btnCadastraProduto.Click += new System.EventHandler(this.btnCadastraProduto_Click);
             // 
-            // btBuscarProduto
+            // textBox2
             // 
-            this.btBuscarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.btBuscarProduto.Location = new System.Drawing.Point(518, 131);
-            this.btBuscarProduto.Name = "btBuscarProduto";
-            this.btBuscarProduto.Size = new System.Drawing.Size(132, 32);
-            this.btBuscarProduto.TabIndex = 5;
-            this.btBuscarProduto.Text = "Buscar Produto";
-            this.btBuscarProduto.UseVisualStyleBackColor = true;
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox2.Location = new System.Drawing.Point(448, 138);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(180, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(600, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 20);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Controle_de_Estoque
             // 
@@ -104,7 +122,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btBuscarProduto);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnCadastraProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
@@ -125,6 +144,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCadastraProduto;
-        private System.Windows.Forms.Button btBuscarProduto;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
