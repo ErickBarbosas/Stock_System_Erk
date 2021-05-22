@@ -39,6 +39,7 @@
             this.dateCompra = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btncadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -147,12 +148,23 @@
             this.label5.Text = "Categoria do produto";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // btncadastrar
+            // 
+            this.btncadastrar.Location = new System.Drawing.Point(231, 258);
+            this.btncadastrar.Name = "btncadastrar";
+            this.btncadastrar.Size = new System.Drawing.Size(142, 43);
+            this.btncadastrar.TabIndex = 11;
+            this.btncadastrar.Text = "Cadastrar Produtor";
+            this.btncadastrar.UseVisualStyleBackColor = true;
+            this.btncadastrar.Click += new System.EventHandler(this.btncadastrar_Click);
+            // 
             // CE_Cadastro_Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(578, 313);
+            this.Controls.Add(this.btncadastrar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateCompra);
@@ -183,5 +195,6 @@
         private System.Windows.Forms.DateTimePicker dateCompra;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btncadastrar;
     }
 }
