@@ -32,6 +32,7 @@ namespace StockSystemErk.View
         {
             try
             {
+               
                 string con = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\Erick Barbosa - NT\source\repos\StockSystemErk\StockSystemErk\Base\StockSystemErk.mdb";
                 string comando = "insert into TB_PRODUTOs(PRD_CODIGO,PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA) values(2,'Cerveja',1000,500,'primeiro',10,'2021-05-04')";
                 OleDbConnection conexao = new OleDbConnection(con);
