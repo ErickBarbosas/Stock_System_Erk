@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StockSystemErk.Objetos
 {
-    class NovoProduto
+    class ObjNovoProduto
     {
         public string produto { get; set; }
         public decimal valorComprado { get; set; }
