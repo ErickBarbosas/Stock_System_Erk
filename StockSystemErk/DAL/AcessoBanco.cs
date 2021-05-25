@@ -24,7 +24,7 @@ namespace StockSystemErk.DAL
            
 
             Comand = "INSERT INTO TB_PRODUTOS (PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA)"+
-                                      "VALUES ("+prd.+")";
+                                      "VALUES ("+prd.produto+","+prd.valorComprado+",++")";
 
         }
 
