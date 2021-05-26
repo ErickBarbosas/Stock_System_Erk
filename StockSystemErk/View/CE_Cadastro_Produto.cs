@@ -43,7 +43,7 @@ namespace StockSystemErk.View
             obj.dataCompra = "2021-05-01";
             obj.categoria = "teste";
 
-                dal.InserirNovoProduto();
+            dal.InserirNovoProduto(obj);
            
         }
     }

@@ -19,17 +19,16 @@ namespace StockSystemErk.DAL
 
 
 
-        public void InserirNovoProduto()
+        public void InserirNovoProduto(ObjNovoProduto prd)
         {
             DataSet ds = new DataSet();
             SqlParameter[] param = new SqlParameter[4];
-            
+            //ObjNovoProduto prd = new ObjNovoProduto();
            
+          
+            //Comand = "INSERT INTO TB_PRODUTOS (PRD_CODIGO,PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) VALUES (3,'"+prd.produto+"',"+prd.valorComprado+","+prd.valorVenda+",'"+prd.descricao+"',"+prd.quantidade+",'"+prd.dataCompra+"','"+prd.categoria+"'";
 
-            Comand = "INSERT INTO TB_PRODUTOS "+
-           "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA)"+
-    "VALUES ('"+prd.produto+"',"+prd.valorComprado+","+prd.valorVenda+",'"+prd.descricao+"',"+prd.quantidade+",'"+prd.dataCompra+"','"+prd.categoria+"'";
-
+             Comand = "insert into TB_PRODUTOs(PRD_CODIGO,PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) values(1,'Cerveja',1000,500,'primeiro',10,'2021-05-04','agora vaiii')";
             try
             {
                 Conn.Open();
