@@ -27,7 +27,6 @@ namespace StockSystemErk.DAL
                     // OleDbCommand cmd = new OleDbCommand();
                 OleDbParameter param = new OleDbParameter();
                 Conn.Open();
-                SqlTransaction transacao = Conn.BeginTransaction();
                 //cmd.CommandType = CommandType.Text;
                 //cmd.Connection = Conn;
 
@@ -37,9 +36,9 @@ namespace StockSystemErk.DAL
 
                 Comand = "INSERT INTO TB_PRODUTOS" +
                    "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) " +
-            "VALUES ('@PRODUTO', @VALORCOMPRA,@VALORVENDA,'@DESCRICAO', @QUANTIDADE, '@DATACOMPRA','@CATEGORIA')";
+               "VALUES ('@PRODUTO', @VALORCOMPRA,@VALORVENDA,'@DESCRICAO', @QUANTIDADE, '@DATACOMPRA','@CATEGORIA')";
 
-                OleDbCommand cmd = new OleDbCommand(Comand,Conn, transacao);
+                OleDbCommand cmd = new OleDbCommand(Comand,Conn);
 
                 cmd.Parameters.AddWithValue("@PRODUTO", prd.produto);
                 cmd.Parameters.AddWithValue("@VALORCOMPRA", prd.valorComprado);
@@ -49,8 +48,22 @@ namespace StockSystemErk.DAL
                 cmd.Parameters.AddWithValue("@DATACOMPRA", prd.dataCompra);
                 cmd.Parameters.AddWithValue("@CATEGORIA", prd.categoria);
 
-              
+                //param.ParameterName = "@PRODUTO";
+                //param.Value = prd.produto;
+                //param.ParameterName = "@VALORCOMPRA";
+                //param.Value = prd.valorComprado;
+                //param.ParameterName = "@VALORVENDA";
+                //param.Value = prd.valorVenda;
+                //param.ParameterName = "@DESCRICAO";
+                //param.Value = prd.descricao;
+                //param.ParameterName = "@QUANTIDADE";
+                //param.Value = prd.quantidade;
+                //param.ParameterName = "@DATACOMPRA";
+                //param.Value = prd.dataCompra;
+                //param.ParameterName = "@CATEGORIA";
+                //param.Value = prd.categoria;
 
+                //cmd.Parameters.Add(param);
 
                 cmd.ExecuteNonQuery();
 
