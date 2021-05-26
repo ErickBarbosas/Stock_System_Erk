@@ -21,29 +21,50 @@ namespace StockSystemErk.DAL
 
         public void InserirNovoProduto(ObjNovoProduto prd)
         {
-            DataSet ds = new DataSet();
-            SqlParameter[] param = new SqlParameter[4];
-            //ObjNovoProduto prd = new ObjNovoProduto();
-           
-          
-            //Comand = "INSERT INTO TB_PRODUTOS (PRD_CODIGO,PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) VALUES (3,'"+prd.produto+"',"+prd.valorComprado+","+prd.valorVenda+",'"+prd.descricao+"',"+prd.quantidade+",'"+prd.dataCompra+"','"+prd.categoria+"'";
 
-             Comand = "insert into TB_PRODUTOs(PRD_CODIGO,PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) values(1,'Cerveja',1000,500,'primeiro',10,'2021-05-04','agora vaiii')";
             try
             {
+                    // OleDbCommand cmd = new OleDbCommand();
+                OleDbParameter param = new OleDbParameter();
                 Conn.Open();
-                OleDbCommand cmd = new OleDbCommand(Comand, Conn);
+                SqlTransaction transacao = Conn.BeginTransaction();
+                //cmd.CommandType = CommandType.Text;
+                //cmd.Connection = Conn;
+
+                //Comand ="INSERT INTO TB_PRODUTOS" +
+                //    "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) "+
+                //    "VALUES('" + prd.produto + "', " + prd.valorComprado + ", " + prd.valorVenda + ", '" + prd.descricao + "', " + prd.quantidade + ", '" + prd.dataCompra + "', '" + prd.categoria + "')";
+
+                Comand = "INSERT INTO TB_PRODUTOS" +
+                   "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) " +
+            "VALUES ('@PRODUTO', @VALORCOMPRA,@VALORVENDA,'@DESCRICAO', @QUANTIDADE, '@DATACOMPRA','@CATEGORIA')";
+
+                OleDbCommand cmd = new OleDbCommand(Comand,Conn, transacao);
+
+                cmd.Parameters.AddWithValue("@PRODUTO", prd.produto);
+                cmd.Parameters.AddWithValue("@VALORCOMPRA", prd.valorComprado);
+                cmd.Parameters.AddWithValue("@VALORVENDA", prd.valorVenda);
+                cmd.Parameters.AddWithValue("@DESCRICAO", prd.descricao);
+                cmd.Parameters.AddWithValue("@QUANTIDADE", prd.quantidade);
+                cmd.Parameters.AddWithValue("@DATACOMPRA", prd.dataCompra);
+                cmd.Parameters.AddWithValue("@CATEGORIA", prd.categoria);
+
+              
+
+
                 cmd.ExecuteNonQuery();
+
+
+
+
+                Conn.Close();
+                
+                
+               
             }
             catch (Exception ex)
-            { }
-            //string con = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\Erick Barbosa - NT\source\repos\StockSystemErk\StockSystemErk\Base\StockSystemErk.mdb";
-            // string comando = "insert into TB_PRODUTOs(PRD_CODIGO,PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA) values(2,'Cerveja',1000,500,'primeiro',10,'2021-05-04')";
-            // OleDbConnection conexao = new OleDbConnection(con);
-            // conexao.Open();
-            // OleDbCommand cmd = new OleDbCommand(comando, conexao);
-
-            //cmd.ExecuteNonQuery();
+            {  }
+       
         }
 
 
