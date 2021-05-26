@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using StockSystemErk.DAL;
+using StockSystemErk.Objetos;
 
 namespace StockSystemErk.View
 {
@@ -30,21 +32,18 @@ namespace StockSystemErk.View
 
         private void btncadastrar_Click(object sender, EventArgs e)
         {
-            try
-            {
-               
-                string con = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\Erick Barbosa - NT\source\repos\StockSystemErk\StockSystemErk\Base\StockSystemErk.mdb";
-                string comando = "insert into TB_PRODUTOs(PRD_CODIGO,PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA) values(2,'Cerveja',1000,500,'primeiro',10,'2021-05-04')";
-                OleDbConnection conexao = new OleDbConnection(con);
-                conexao.Open();
-                OleDbCommand cmd = new OleDbCommand(comando, conexao);
+            ObjNovoProduto obj = new ObjNovoProduto();
+            AcessoBanco dal = new AcessoBanco();
 
-                cmd.ExecuteNonQuery();
-            }
-            catch( Exception ex )
-            {
-              
-            }
+            obj.produto = textProduto.Text;
+            obj.valorComprado = textVlrCompra.Text;
+            obj.valorVenda = texVlrVenda.Text;
+            obj.quantidade = txtQuantidade.Text;
+            obj.descricao = "testando";
+            obj.dataCompra = "2021-05-01";
+            obj.categoria = "teste";
+
+                dal.InserirNovoProduto();
            
         }
     }

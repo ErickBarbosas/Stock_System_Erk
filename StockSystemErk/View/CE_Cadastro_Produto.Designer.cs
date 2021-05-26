@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CE_Cadastro_Produto));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textProduto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textVlrCompra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.texVlrVenda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateCompra = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -44,12 +44,12 @@
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textProduto
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textProduto.Location = new System.Drawing.Point(123, 47);
+            this.textProduto.Name = "textProduto";
+            this.textProduto.Size = new System.Drawing.Size(100, 20);
+            this.textProduto.TabIndex = 0;
             // 
             // label1
             // 
@@ -75,12 +75,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Valor de Compra ";
             // 
-            // textBox2
+            // textVlrCompra
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.textVlrCompra.Location = new System.Drawing.Point(123, 77);
+            this.textVlrCompra.Name = "textVlrCompra";
+            this.textVlrCompra.Size = new System.Drawing.Size(100, 20);
+            this.textVlrCompra.TabIndex = 3;
             // 
             // label3
             // 
@@ -94,12 +94,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Valor de Venda";
             // 
-            // textBox3
+            // texVlrVenda
             // 
-            this.textBox3.Location = new System.Drawing.Point(345, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.texVlrVenda.Location = new System.Drawing.Point(345, 81);
+            this.texVlrVenda.Name = "texVlrVenda";
+            this.texVlrVenda.Size = new System.Drawing.Size(100, 20);
+            this.texVlrVenda.TabIndex = 5;
             // 
             // label4
             // 
@@ -192,12 +192,12 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateCompra);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.texVlrVenda);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textVlrCompra);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textProduto);
             this.Name = "CE_Cadastro_Produto";
             this.Text = "Cadastrar Produto";
             this.Load += new System.EventHandler(this.Cadastro_Produto_Load);
@@ -208,12 +208,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textProduto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textVlrCompra;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox texVlrVenda;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateCompra;
         private System.Windows.Forms.ComboBox comboBox1;
