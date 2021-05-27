@@ -14,24 +14,31 @@ namespace StockSystemErk.DAL
     {
         private static string StringConexao = StockSystemErk.Properties.Settings.Default.ConexaoBD.ToString();
         OleDbConnection Conn = new OleDbConnection(StringConexao);
-       
-        string Comand;
+        OleDbCommand cmd = new OleDbCommand();
+        
+        string Comand = "";
 
         public DataTable CarregaGridEstoque()
         {
-            Comand = "Select * From TB_PRODUTOS";
-            OleDbCommand cmd = new OleDbCommand(Comand, Conn);
-      
-
-            
-            Conn.Open();
-            cmd.CommandType = CommandType.Text;
-
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataTable tbProdutos = new DataTable();
 
-            da.Fill(tbProdutos);
+            try
+            {
+                Conn.Open();
 
+                Comand = "Select * From TB_PRODUTOS";
+
+                cmd.Connection=Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
+                
+                da.Fill(tbProdutos);
+            }
+            catch
+            { }
+
+            Conn.Close();
             return tbProdutos;
         }
 
@@ -39,27 +46,19 @@ namespace StockSystemErk.DAL
 
         public void InserirNovoProduto(ObjNovoProduto prd)
         {
-
             try
             {
-                OleDbParameter param = new OleDbParameter();
-                    // OleDbCommand cmd = new OleDbCommand();
-                
-                Conn.Open();
-                //cmd.CommandType = CommandType.Text;
-                //cmd.Connection = Conn;
 
-                //Comand ="INSERT INTO TB_PRODUTOS" +
-                //    "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) "+
-                //    "VALUES('" + prd.produto + "', " + prd.valorComprado + ", " + prd.valorVenda + ", '" + prd.descricao + "', " + prd.quantidade + ", '" + prd.dataCompra + "', '" + prd.categoria + "')";
+                Conn.Open();
 
                 Comand = "INSERT INTO TB_PRODUTOS" +
                    "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) " +
                "VALUES (@PRODUTO, @VALORCOMPRA,@VALORVENDA,@DESCRICAO, @QUANTIDADE, @DATACOMPRA,@CATEGORIA)";
 
-                OleDbCommand cmd = new OleDbCommand(Comand,Conn);
+                cmd.Connection = Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
 
-                
                 cmd.Parameters.Add("@PRODUTO", OleDbType.VarChar).Value = prd.produto;
                 cmd.Parameters.Add("@VALORCOMPRA",OleDbType.Decimal).Value= prd.valorComprado;
                 cmd.Parameters.Add("@VALORVENDA", OleDbType.Decimal).Value= prd.valorVenda;
