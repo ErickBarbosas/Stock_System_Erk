@@ -15,6 +15,9 @@ namespace StockSystemErk.View
 {
     public partial class CE_Cadastro_Produto : Form
     {
+
+        ObjNovoProduto NewProdutoObj = new ObjNovoProduto();
+
         public CE_Cadastro_Produto()
         {
             InitializeComponent();
@@ -30,21 +33,29 @@ namespace StockSystemErk.View
 
         }
 
+        public void SetProdutoNovo()
+        {
+            NewProdutoObj.produto = textProduto.Text;
+            NewProdutoObj.valorComprado = textVlrCompra.Text;
+            NewProdutoObj.valorVenda = texVlrVenda.Text;
+            NewProdutoObj.quantidade = txtQuantidade.Text;
+            NewProdutoObj.descricao = textDescricao.Text;
+            NewProdutoObj.dataCompra = dateCompra.Text;
+            NewProdutoObj.categoria = dllCategoria.SelectedItem.ToString();
+        }
+
         private void btncadastrar_Click(object sender, EventArgs e)
         {
-            ObjNovoProduto obj = new ObjNovoProduto();
+            InserirNovoProduto();
+        }
+
+        public void InserirNovoProduto()
+        {
             AcessoBanco dal = new AcessoBanco();
 
-            obj.produto = textProduto.Text;
-            obj.valorComprado = textVlrCompra.Text;
-            obj.valorVenda = texVlrVenda.Text;
-            obj.quantidade = txtQuantidade.Text;
-            obj.descricao = "testando";
-            obj.dataCompra = "2021-05-01";
-            obj.categoria = "teste";
-
-            dal.InserirNovoProduto(obj);
-           
+            SetProdutoNovo();
+            dal.InserirNovoProduto(NewProdutoObj);
         }
+
     }
 }

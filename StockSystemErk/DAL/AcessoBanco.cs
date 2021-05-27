@@ -42,6 +42,7 @@ namespace StockSystemErk.DAL
 
             try
             {
+                OleDbParameter param = new OleDbParameter();
                     // OleDbCommand cmd = new OleDbCommand();
                 
                 Conn.Open();
@@ -54,44 +55,22 @@ namespace StockSystemErk.DAL
 
                 Comand = "INSERT INTO TB_PRODUTOS" +
                    "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) " +
-               "VALUES ('@PRODUTO', @VALORCOMPRA,@VALORVENDA,'@DESCRICAO', @QUANTIDADE, '@DATACOMPRA','@CATEGORIA')";
+               "VALUES (@PRODUTO, @VALORCOMPRA,@VALORVENDA,@DESCRICAO, @QUANTIDADE, @DATACOMPRA,@CATEGORIA)";
 
                 OleDbCommand cmd = new OleDbCommand(Comand,Conn);
 
-                cmd.Parameters.AddWithValue("@PRODUTO", prd.produto);
-                cmd.Parameters.AddWithValue("@VALORCOMPRA", prd.valorComprado);
-                cmd.Parameters.AddWithValue("@VALORVENDA", prd.valorVenda);
-                cmd.Parameters.AddWithValue("@DESCRICAO", prd.descricao);
-                cmd.Parameters.AddWithValue("@QUANTIDADE", prd.quantidade);
-                cmd.Parameters.AddWithValue("@DATACOMPRA", prd.dataCompra);
-                cmd.Parameters.AddWithValue("@CATEGORIA", prd.categoria);
-
-                //param.ParameterName = "@PRODUTO";
-                //param.Value = prd.produto;
-                //param.ParameterName = "@VALORCOMPRA";
-                //param.Value = prd.valorComprado;
-                //param.ParameterName = "@VALORVENDA";
-                //param.Value = prd.valorVenda;
-                //param.ParameterName = "@DESCRICAO";
-                //param.Value = prd.descricao;
-                //param.ParameterName = "@QUANTIDADE";
-                //param.Value = prd.quantidade;
-                //param.ParameterName = "@DATACOMPRA";
-                //param.Value = prd.dataCompra;
-                //param.ParameterName = "@CATEGORIA";
-                //param.Value = prd.categoria;
-
-                //cmd.Parameters.Add(param);
-
+                
+                cmd.Parameters.Add("@PRODUTO", OleDbType.VarChar).Value = prd.produto;
+                cmd.Parameters.Add("@VALORCOMPRA",OleDbType.Decimal).Value= prd.valorComprado;
+                cmd.Parameters.Add("@VALORVENDA", OleDbType.Decimal).Value= prd.valorVenda;
+                cmd.Parameters.Add("@DESCRICAO", OleDbType.VarChar).Value = prd.descricao;
+                cmd.Parameters.Add("@QUANTIDADE",OleDbType.Integer).Value = prd.quantidade;
+                cmd.Parameters.Add("@DATACOMPRA", OleDbType.Date).Value = prd.dataCompra;
+                cmd.Parameters.Add("@CATEGORIA", OleDbType.VarChar).Value = prd.categoria;
+                
                 cmd.ExecuteNonQuery();
 
-
-
-
-                Conn.Close();
-                
-                
-               
+                Conn.Close();               
             }
             catch (Exception ex)
             {  }
