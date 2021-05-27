@@ -110,6 +110,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\CE_Cadastro_Produto.af.resx">
+      <DependentUpon>CE_Cadastro_Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CE_Cadastro_Produto.pt-BR.resx">
+      <DependentUpon>CE_Cadastro_Produto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CE_Cadastro_Produto.resx">
       <DependentUpon>CE_Cadastro_Produto.cs</DependentUpon>
     </EmbeddedResource>

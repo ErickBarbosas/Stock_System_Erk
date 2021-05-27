@@ -19,8 +19,7 @@ namespace StockSystemErk.View
         public Controle_de_Estoque()
         {
             InitializeComponent();
-            gridEstoque.DataSource= Conn.CarregaGridEstoque();
-            
+            CarregaGridProdutos();
         }
 
         private void btnCadastraProduto_Click(object sender, EventArgs e)
@@ -28,6 +27,11 @@ namespace StockSystemErk.View
             CE_Cadastro_Produto cadastrarProduto = new CE_Cadastro_Produto();
 
                 cadastrarProduto.Show();
+        }
+
+        public void CarregaGridProdutos()
+        {
+            gridEstoque.DataSource = Conn.CarregaGridEstoque();
         }
     }
 }
