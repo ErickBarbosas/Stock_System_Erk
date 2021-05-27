@@ -102,6 +102,7 @@
             this.texVlrVenda.Name = "texVlrVenda";
             this.texVlrVenda.Size = new System.Drawing.Size(125, 20);
             this.texVlrVenda.TabIndex = 5;
+            this.texVlrVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.texVlrVenda_KeyPress);
             // 
             // label4
             // 
@@ -152,7 +153,6 @@
             this.label5.Size = new System.Drawing.Size(126, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Categoria do produto";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btncadastrar
             // 
@@ -226,7 +226,6 @@
             this.Controls.Add(this.textProduto);
             this.Name = "CE_Cadastro_Produto";
             this.Text = "Cadastrar Produto";
-            this.Load += new System.EventHandler(this.Cadastro_Produto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,15 +23,6 @@ namespace StockSystemErk.View
             InitializeComponent();
         }
 
-        private void Cadastro_Produto_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         public void SetProdutoNovo()
         {
@@ -55,7 +46,28 @@ namespace StockSystemErk.View
 
             SetProdutoNovo();
             dal.InserirNovoProduto(NewProdutoObj);
+            MessageBox.Show( "Produto Cadastrado Com Sucesso !","Sucesso");
+            Limpacomponente();
+
         }
 
+        public void Limpacomponente()
+        {
+            textProduto.Text = "";
+            textVlrCompra.Text = "";
+            texVlrVenda.Text = "";
+            txtQuantidade.Text = "";
+            textDescricao.Text = "";
+            dateCompra.Text = DateTime.Today.ToString();
+            dllCategoria.SelectedIndex = 0;
+        }
+
+        private void texVlrVenda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
