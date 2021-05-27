@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockSystemErk.View;
+using StockSystemErk.DAL;
 
 namespace StockSystemErk.View
 {
     public partial class Controle_de_Estoque : Form
     {
+        AcessoBanco Conn = new AcessoBanco();
+
         public Controle_de_Estoque()
         {
             InitializeComponent();
+            gridEstoque.DataSource= Conn.CarregaGridEstoque();
+            
         }
 
         private void btnCadastraProduto_Click(object sender, EventArgs e)

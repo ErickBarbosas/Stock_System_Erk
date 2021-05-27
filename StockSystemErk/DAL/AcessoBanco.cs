@@ -17,6 +17,24 @@ namespace StockSystemErk.DAL
        
         string Comand;
 
+        public DataTable CarregaGridEstoque()
+        {
+            Comand = "Select * From TB_PRODUTOS";
+            OleDbCommand cmd = new OleDbCommand(Comand, Conn);
+      
+
+            
+            Conn.Open();
+            cmd.CommandType = CommandType.Text;
+
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataTable tbProdutos = new DataTable();
+
+            da.Fill(tbProdutos);
+
+            return tbProdutos;
+        }
+
 
 
         public void InserirNovoProduto(ObjNovoProduto prd)
@@ -25,7 +43,7 @@ namespace StockSystemErk.DAL
             try
             {
                     // OleDbCommand cmd = new OleDbCommand();
-                OleDbParameter param = new OleDbParameter();
+                
                 Conn.Open();
                 //cmd.CommandType = CommandType.Text;
                 //cmd.Connection = Conn;
