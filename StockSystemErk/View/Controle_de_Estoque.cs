@@ -14,7 +14,7 @@ namespace StockSystemErk.View
 {
     public partial class Controle_de_Estoque : Form
     {
-        AcessoBanco Conn = new AcessoBanco();
+        AcessoBanco BD = new AcessoBanco();
 
         public Controle_de_Estoque()
         {
@@ -27,11 +27,41 @@ namespace StockSystemErk.View
             CE_Cadastro_Produto cadastrarProduto = new CE_Cadastro_Produto();
 
                 cadastrarProduto.Show();
+            this.Refresh();
         }
 
         public void CarregaGridProdutos()
         {
-            gridEstoque.DataSource = Conn.CarregaGridEstoque();
+            DataTable dt;
+            dt = BD.CarregaGridEstoque();
+
+            gridEstoque.DataSource = dt;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void PesquisarProduto()
+        {
+            string pesquisa;
+            DataTable dt;
+            pesquisa = textBox2.Text;
+
+            dt = BD.PesquisarProduto(pesquisa);
+
+            gridEstoque.DataSource = dt;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            PesquisarProduto();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CarregaGridProdutos();
         }
     }
 }

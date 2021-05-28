@@ -42,8 +42,28 @@ namespace StockSystemErk.DAL
             return tbProdutos;
         }
 
+        public DataTable PesquisarProduto(string pesquisa)
+        {
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataTable produto = new DataTable();
 
+            try
+            {
+                Comand = "Select * from TB_PRODUTOS Where PRD_PRODUTO LIKE '%"+ pesquisa + "%'";
 
+                Conn.Open();
+                cmd.Connection = Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
+
+                da.Fill(produto);
+            }
+            catch(Exception ex)
+            { }
+
+            Conn.Close();
+            return produto;
+        }
         public void InserirNovoProduto(ObjNovoProduto prd)
         {
             try

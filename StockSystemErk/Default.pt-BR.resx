@@ -127,7 +127,7 @@
         rjiW8KBwZ9KyJT84W+Kk4g3FViZv/tSpOmxatmemlS67gygTTBFDwyDPKhlyhOW0RXGJy32kir/d98fE
         ZYhrFVMcY6xhoft+1B/8nq2bGugvJTVFoO7J8966oH4bvgqe93noeV9HUPMIF3bZv1aE4XfRC2Wt8wBa
         NuHssqwZO3C+BW0PWd3RfalGdjCVgtcT+aY5aL2GxoXS3H7uOb6DhMxq8gr29qE7LdmLVfpuqJzbn2/8
-        +RH5BkXHcpXywxRTAAAACXBIWXMAAA6/AAAOvwE4BVMkAAAiJnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4
+        +RH5BkXHcpXywxRTAAAACXBIWXMAAA6+AAAOvgHqQrHAAAAiJnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4
         aWYAAHjarZtpkhw7cq3/YxVaAhwzloPRTDvQ8vUdZPJyaLbM3pMuu1lVycwIhA9ncKDc+a//vO4/+K/2
         nlzKtZVeiue/1FMPg2+a//w339/m0/v7/ZfK99/s99ddON9/CLwU+Ro/P/bwff3wOt/H8X39exP78f4f
         F/rxjQ2+yz//YX8vZPOP178XDO3PC30/EO1zZ7+/C/nxevi8bunz8/0utPRWf3s0fnjfxvZ9qf38f4o5
@@ -665,7 +665,7 @@
         NuHssqwZO3C+BW0PWd3RfalGdjCVgtcT+aY5aL2GxoXS3H7uOb6DhMxq8gr29qE7LdmLVfpuqJzbn2/8
         +RH5BkXHcpXywxRTAAAAV1BMVEX/zJlcX2I7bJ3/kSFmZmb/1KIhWZHu7u7/////mTI3NjS1ubwZGx1V
         U1Lz9/n+qll3dHHI1Nz+u32Rs8qihmvwv5L/WSIvy8uOjo64eTvthTv84c3EoX4yxo+DAAAACXBIWXMA
-        AAsOAAALDgFAvuFBAAAVIHpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjaxZppciM5koX/4xRzhMAO
+        AAsNAAALDQHtB8AsAAAVIHpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjaxZppciM5koX/4xRzhMAO
         HAeAA2Z9gzn+fA/BzMpF1V1WXWYjZYoUyUAgfHmLh9z+338d9z985fwEl3JtpZfy8JV66mHwpD3v17g/
         /ZPuz/uVP2/x+0+vu5g+bwReijzG99dWPp//9rr/vsD7MHiWf1iorc8b8+c3+ucEof2yUHgfonak5/ZZ
         qH8WiuF9w38WGO9lPaW3+uMlzP0+2rdLbO9/px+p/bzt336vRM+IKKcLO/r48DO8QeFR/72LgyeZnz72
@@ -824,9 +824,6 @@
         fRmU8g+U38i4wcCRXQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
   <data name="btnFaturamento.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEYAAAAqCAYAAAAOGC2lAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkTtI
@@ -836,7 +833,7 @@
         rjiW8KBwZ9KyJT84W+Kk4g3FViZv/tSpOmxatmemlS67gygTTBFDwyDPKhlyhOW0RXGJy32kir/d98fE
         ZYhrFVMcY6xhoft+1B/8nq2bGugvJTVFoO7J8966oH4bvgqe93noeV9HUPMIF3bZv1aE4XfRC2Wt8wBa
         NuHssqwZO3C+BW0PWd3RfalGdjCVgtcT+aY5aL2GxoXS3H7uOb6DhMxq8gr29qE7LdmLVfpuqJzbn2/8
-        +RH5BkXHcpXywxRTAAAACXBIWXMAAAsOAAALDgFAvuFBAAAYw3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4
+        +RH5BkXHcpXywxRTAAAACXBIWXMAAAsNAAALDQHtB8AsAAAYw3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4
         aWYAAHjarZtndhw5soX/YxWzBHizHNhzZgdv+fNdZJGiSFEtvRmyRRarMuEi4hog2+z/+/cx/+IrZ5tN
         TKXmxku+YovNd15U+3z1+9PZeH/er5hfn7mf3ze+vz7wvBX4HZ4/6+sG9/a+e2/g+dV5lT40VOfrg/Hz
         By2+2q+fGvLPr6AR6fV6NdReDQX/fOBeDfTXSHOr5eMUxn5+v+5/loF/Rj9i/XnYX/4urN5K9BO838EF
@@ -1415,12 +1412,5 @@
         o40ep6nqKpImbp7Fiz79zXocHqUysewttHv1m2dS3+g7jsNhs+IkJPsm/uhbdT3+FbvV7HZEujw536P/
         2Q==
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
   </data>
 </root>

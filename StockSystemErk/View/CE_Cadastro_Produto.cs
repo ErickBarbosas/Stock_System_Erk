@@ -15,6 +15,7 @@ namespace StockSystemErk.View
 {
     public partial class CE_Cadastro_Produto : Form
     {
+      
         ObjNovoProduto NewProdutoObj = new ObjNovoProduto();
 
         public CE_Cadastro_Produto()
@@ -48,7 +49,6 @@ namespace StockSystemErk.View
             MessageBox.Show( "Produto Cadastrado Com Sucesso !","Sucesso");
             Limpacomponente();
             this.Close();
-            
 
         }
 
