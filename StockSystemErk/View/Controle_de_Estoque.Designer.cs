@@ -38,7 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnCadastraProduto = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.gridEstoque = new System.Windows.Forms.DataGridView();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +78,8 @@
             // btnCadastraProduto
             // 
             this.btnCadastraProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastraProduto.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.btnCadastraProduto.FlatAppearance.BorderSize = 50;
             this.btnCadastraProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.btnCadastraProduto.Location = new System.Drawing.Point(994, 79);
             this.btnCadastraProduto.Name = "btnCadastraProduto";
@@ -96,17 +98,17 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 20);
             this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button2
+            // btnAtualizar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 32);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Atualizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(3, 79);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(59, 32);
+            this.btnAtualizar.TabIndex = 7;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnPesquisar
             // 
@@ -137,9 +139,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridEstoque.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridEstoque.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridEstoque.BackgroundColor = System.Drawing.Color.White;
             this.gridEstoque.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridEstoque.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.gridEstoque.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,11 +172,9 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridEstoque.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridEstoque.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gridEstoque.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.gridEstoque.Location = new System.Drawing.Point(3, 117);
             this.gridEstoque.Name = "gridEstoque";
             this.gridEstoque.ReadOnly = true;
-            this.gridEstoque.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,7 +255,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.gridEstoque);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnAtualizar);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.btnPesquisar);
             this.panel1.Controls.Add(this.btnCadastraProduto);
@@ -287,7 +289,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnCadastraProduto;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;

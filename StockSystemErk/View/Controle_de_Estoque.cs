@@ -38,10 +38,6 @@ namespace StockSystemErk.View
             gridEstoque.DataSource = dt;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         public void PesquisarProduto()
         {
@@ -59,9 +55,9 @@ namespace StockSystemErk.View
             PesquisarProduto();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            CarregaGridProdutos();
+
         }
     }
 }
