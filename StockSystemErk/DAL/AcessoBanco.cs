@@ -18,6 +18,29 @@ namespace StockSystemErk.DAL
         
         string Comand = "";
 
+
+        public DataSet GetDadosProdutos(string codigo)
+        {
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            try
+            {
+                
+                Comand = "Select * from TB_PRODUTOS WHERE PRD_CODIGO = " + codigo;
+
+                Conn.Open();
+                cmd.Connection = Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
+
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            { }
+            Conn.Close();
+            return ds;
+        }
+
         public DataTable CarregaGridEstoque()
         {
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
