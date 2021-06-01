@@ -20,6 +20,7 @@ namespace StockSystemErk.View
         {
             InitializeComponent();
             CarregaGridProdutos();
+            painelAlterar.Visible = false;
         }
 
         private void btnCadastraProduto_Click(object sender, EventArgs e)
@@ -59,5 +60,17 @@ namespace StockSystemErk.View
         {
             CarregaGridProdutos();
         }
+
+        private void gridEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row;
+            row = e.RowIndex;
+
+          String value=  gridEstoque.Rows[row].Cells[1].Value.ToString();
+
+            painelAlterar.Visible = true;
+        }
+
+
     }
 }
