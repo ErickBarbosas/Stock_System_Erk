@@ -121,42 +121,39 @@
     <value>Nome do Produto</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btncadastrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 258</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textVlrCompra.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>578, 316</value>
   </data>
   <data name="&gt;&gt;btncadastrar.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="texVlrVenda.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;dateCompra.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 13</value>
   </data>
   <data name="&gt;&gt;texVlrVenda.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>7</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;dateCompra.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
+  </data>
+  <data name="textProduto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
   </data>
   <data name="&gt;&gt;texVlrVenda.Name" xml:space="preserve">
     <value>texVlrVenda</value>
   </data>
   <data name="&gt;&gt;textDescricao.Name" xml:space="preserve">
     <value>textDescricao</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dateCompra.CalendarFont" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -179,8 +176,8 @@
   <data name="&gt;&gt;textDescricao.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtQuantidade.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btncadastrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 43</value>
   </data>
   <data name="txtQuantidade.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
@@ -200,14 +197,14 @@
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 137</value>
   </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 13</value>
   </data>
   <data name="textProduto.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -221,8 +218,8 @@
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;textProduto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dateCompra.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
   </data>
   <data name="&gt;&gt;btncadastrar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -241,13 +238,10 @@
     <value>23, 91</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="textProduto.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 47</value>
-  </data>
-  <data name="dllCategoria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 129</value>
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -261,8 +255,8 @@
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
+  <data name="&gt;&gt;txtQuantidade.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 13</value>
@@ -270,8 +264,17 @@
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="dllCategoria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 21</value>
+  </data>
+  <data name="&gt;&gt;texVlrVenda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;txtQuantidade.Name" xml:space="preserve">
     <value>txtQuantidade</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 50</value>
   </data>
   <data name="&gt;&gt;txtQuantidade.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -286,13 +289,10 @@
     <value>Doce</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
-  </data>
-  <data name="&gt;&gt;textDescricao.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 13</value>
@@ -306,14 +306,11 @@
   <data name="dllCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;texVlrVenda.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 91</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -327,11 +324,8 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Data da Compra</value>
   </data>
-  <data name="textDescricao.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="textDescricao.Location" type="System.Drawing.Point, System.Drawing">
     <value>79, 186</value>
@@ -342,8 +336,8 @@
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="textProduto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 20</value>
+  <data name="&gt;&gt;texVlrVenda.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;dllCategoria.Parent" xml:space="preserve">
     <value>$this</value>
@@ -370,7 +364,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -853,19 +847,22 @@
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  <data name="&gt;&gt;textVlrCompra.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;texVlrVenda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;textProduto.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="dateCompra.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 20</value>
+  <data name="textVlrCompra.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btncadastrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 258</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
@@ -874,11 +871,17 @@
   <data name="&gt;&gt;btncadastrar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;dateCompra.Name" xml:space="preserve">
     <value>dateCompra</value>
+  </data>
+  <data name="texVlrVenda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 88</value>
   </data>
   <data name="&gt;&gt;dateCompra.Parent" xml:space="preserve">
     <value>$this</value>
@@ -886,8 +889,8 @@
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;txtQuantidade.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;textVlrCompra.Name" xml:space="preserve">
     <value>textVlrCompra</value>
@@ -895,11 +898,11 @@
   <data name="label5.Text" xml:space="preserve">
     <value>Categoria do produto</value>
   </data>
-  <data name="btncadastrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 43</value>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;textVlrCompra.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;textProduto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="textVlrCompra.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
@@ -907,14 +910,11 @@
   <data name="txtQuantidade.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 130</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 50</value>
+  <data name="textDescricao.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cadastrar Produto</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Descrição:</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Valor de Compra </value>
@@ -922,14 +922,11 @@
   <data name="texVlrVenda.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
   </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="dllCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 21</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 91</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>310, 49</value>
@@ -943,8 +940,11 @@
   <data name="textDescricao.Size" type="System.Drawing.Size, System.Drawing">
     <value>416, 66</value>
   </data>
-  <data name="texVlrVenda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 88</value>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btncadastrar.Name" xml:space="preserve">
+    <value>btncadastrar</value>
   </data>
   <data name="&gt;&gt;textVlrCompra.Parent" xml:space="preserve">
     <value>$this</value>
@@ -964,47 +964,47 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;txtQuantidade.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="dllCategoria.Items2" xml:space="preserve">
+    <value>Salgado</value>
   </data>
   <data name="dateCompra.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>578, 316</value>
+  <data name="&gt;&gt;textDescricao.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;textProduto.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textVlrCompra.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btncadastrar.Name" xml:space="preserve">
-    <value>btncadastrar</value>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dllCategoria.Items2" xml:space="preserve">
-    <value>Salgado</value>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
   </data>
-  <data name="&gt;&gt;dateCompra.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dllCategoria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>414, 129</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Descrição:</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -43,7 +43,6 @@ namespace StockSystemErk.View
             txtDescricao.Text= ds.Tables[0].Rows[0][4].ToString();
             txtQuantidade.Text= ds.Tables[0].Rows[0][5].ToString();
             txtdatacompra.Text = ds.Tables[0].Rows[0][6].ToString();
-            cbxCategoria.Text = ds.Tables[0].Rows[0][6].ToString();
         }
 
 

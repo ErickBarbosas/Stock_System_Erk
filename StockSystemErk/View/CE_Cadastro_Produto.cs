@@ -32,7 +32,6 @@ namespace StockSystemErk.View
             NewProdutoObj.quantidade = txtQuantidade.Text;
             NewProdutoObj.descricao = textDescricao.Text;
             NewProdutoObj.dataCompra = dateCompra.Text;
-            NewProdutoObj.categoria = dllCategoria.SelectedItem.ToString();
         }
 
         private void btncadastrar_Click(object sender, EventArgs e)
@@ -60,7 +59,6 @@ namespace StockSystemErk.View
             txtQuantidade.Text = "";
             textDescricao.Text = "";
             dateCompra.Text = DateTime.Today.ToString();
-            dllCategoria.SelectedIndex = 0;
         }
 
         private void texVlrVenda_KeyPress(object sender, KeyPressEventArgs e)

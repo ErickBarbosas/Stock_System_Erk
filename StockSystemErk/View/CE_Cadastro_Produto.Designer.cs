@@ -37,8 +37,6 @@
             this.texVlrVenda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateCompra = new System.Windows.Forms.DateTimePicker();
-            this.dllCategoria = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btncadastrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
@@ -99,23 +97,6 @@
             this.dateCompra.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.dateCompra.Name = "dateCompra";
             // 
-            // dllCategoria
-            // 
-            resources.ApplyResources(this.dllCategoria, "dllCategoria");
-            this.dllCategoria.FormattingEnabled = true;
-            this.dllCategoria.Items.AddRange(new object[] {
-            resources.GetString("dllCategoria.Items"),
-            resources.GetString("dllCategoria.Items1"),
-            resources.GetString("dllCategoria.Items2")});
-            this.dllCategoria.Name = "dllCategoria";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Name = "label5";
-            // 
             // btncadastrar
             // 
             resources.ApplyResources(this.btncadastrar, "btncadastrar");
@@ -156,8 +137,6 @@
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btncadastrar);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dllCategoria);
             this.Controls.Add(this.dateCompra);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.texVlrVenda);
@@ -188,8 +167,6 @@
         private System.Windows.Forms.TextBox texVlrVenda;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateCompra;
-        private System.Windows.Forms.ComboBox dllCategoria;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btncadastrar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtQuantidade;
