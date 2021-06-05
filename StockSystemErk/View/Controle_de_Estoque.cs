@@ -92,7 +92,14 @@ namespace StockSystemErk.View
                         CarregarPainelAlterar(value);
                         painelAlterar.Visible = true;
                     break;
+
                 case 1:
+                    DialogResult confirm;
+                    confirm= MessageBox.Show("Deseja Realmente Apagar Esse Produto do Estoque ?","Confimação",MessageBoxButtons.YesNo
+                        ,MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button2);
+
+                    if (confirm.ToString().ToUpper() == "YES")
+                    { }
 
                     break;
 
