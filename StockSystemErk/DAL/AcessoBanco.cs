@@ -18,6 +18,29 @@ namespace StockSystemErk.DAL
         
         string Comand = "";
 
+
+        public DataSet GetDadosProdutos(string codigo)
+        {
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            try
+            {
+                
+                Comand = "Select * from TB_PRODUTOS WHERE PRD_CODIGO = " + codigo;
+
+                Conn.Open();
+                cmd.Connection = Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
+
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            { }
+            Conn.Close();
+            return ds;
+        }
+
         public DataTable CarregaGridEstoque()
         {
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
@@ -72,8 +95,8 @@ namespace StockSystemErk.DAL
                 Conn.Open();
 
                 Comand = "INSERT INTO TB_PRODUTOS" +
-                   "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA,PRD_CATEGORIA) " +
-               "VALUES (@PRODUTO, @VALORCOMPRA,@VALORVENDA,@DESCRICAO, @QUANTIDADE, @DATACOMPRA,@CATEGORIA)";
+                   "(PRD_PRODUTO,PRD_VLRCOMPRA,PRD_VLRVENDA,PRD_DESCRICAO,PRD_QUANTIDADE,PRD_DATACOMPRA) " +
+               "VALUES (@PRODUTO, @VALORCOMPRA,@VALORVENDA,@DESCRICAO, @QUANTIDADE, @DATACOMPRA)";
 
                 cmd.Connection = Conn;
                 cmd.CommandText = Comand;
@@ -85,7 +108,6 @@ namespace StockSystemErk.DAL
                 cmd.Parameters.Add("@DESCRICAO", OleDbType.VarChar).Value = prd.descricao;
                 cmd.Parameters.Add("@QUANTIDADE",OleDbType.Integer).Value = prd.quantidade;
                 cmd.Parameters.Add("@DATACOMPRA", OleDbType.Date).Value = prd.dataCompra;
-                cmd.Parameters.Add("@CATEGORIA", OleDbType.VarChar).Value = prd.categoria;
                 
                 cmd.ExecuteNonQuery();
 
