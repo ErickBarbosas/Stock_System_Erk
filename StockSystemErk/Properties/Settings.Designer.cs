@@ -25,8 +25,8 @@ namespace StockSystemErk.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\Users\\Erick Barbosa\\source\\repos" +
-            "\\Stock_System_Erk\\StockSystemErk\\Base\\StockSystemErk.mdb\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\Users\\Erick Barbosa - NT\\source\\" +
+            "repos\\StockSystemErk\\StockSystemErk\\Base\\StockSystemErk.mdb\"")]
         public string ConexaoBD {
             get {
                 return ((string)(this["ConexaoBD"]));

@@ -61,6 +61,8 @@
             this.btnAlterarPRD = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vlr_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +70,6 @@
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAlterar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridEstoque)).BeginInit();
             this.painelEstoque.SuspendLayout();
             this.painelAlterar.SuspendLayout();
@@ -176,14 +177,15 @@
             this.gridEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnAlterar,
+            this.btnExcluir,
             this.CODIGO,
             this.Produto,
             this.Vlr_Compra,
             this.vlr_venda,
             this.quantidade,
             this.descricao,
-            this.dataCompra,
-            this.btnAlterar});
+            this.dataCompra});
             this.gridEstoque.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -221,8 +223,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.painelEstoque.BackColor = System.Drawing.Color.Transparent;
-            this.painelEstoque.Controls.Add(this.painelAlterar);
             this.painelEstoque.Controls.Add(this.gridEstoque);
+            this.painelEstoque.Controls.Add(this.painelAlterar);
             this.painelEstoque.Controls.Add(this.btnAtualizar);
             this.painelEstoque.Controls.Add(this.textBox2);
             this.painelEstoque.Controls.Add(this.btnPesquisar);
@@ -440,6 +442,23 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Produtos em Estoque:";
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.HeaderText = "Alterar";
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.ReadOnly = true;
+            this.btnAlterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.HeaderText = "Apagar";
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.ReadOnly = true;
+            this.btnExcluir.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnExcluir.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // CODIGO
             // 
             this.CODIGO.DataPropertyName = "PRD_CODIGO";
@@ -488,12 +507,6 @@
             this.dataCompra.HeaderText = "Data da Compra";
             this.dataCompra.Name = "dataCompra";
             this.dataCompra.ReadOnly = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.HeaderText = "Alterar";
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.ReadOnly = true;
             // 
             // Controle_de_Estoque
             // 
@@ -547,6 +560,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewImageColumn btnAlterar;
+        private System.Windows.Forms.DataGridViewImageColumn btnExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vlr_Compra;
@@ -554,6 +569,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCompra;
-        private System.Windows.Forms.DataGridViewButtonColumn btnAlterar;
     }
 }
