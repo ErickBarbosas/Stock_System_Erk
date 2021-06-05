@@ -41,6 +41,9 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.gridEstoque = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vlr_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +52,7 @@
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridEstoque)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -133,6 +134,8 @@
             // 
             // gridEstoque
             // 
+            this.gridEstoque.AllowUserToAddRows = false;
+            this.gridEstoque.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,7 +166,8 @@
             this.quantidade,
             this.categoria,
             this.descricao,
-            this.dataCompra});
+            this.dataCompra,
+            this.btnAlterar});
             this.gridEstoque.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -193,62 +197,6 @@
             this.gridEstoque.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gridEstoque.Size = new System.Drawing.Size(1126, 288);
             this.gridEstoque.TabIndex = 0;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.DataPropertyName = "PRD_CODIGO";
-            this.CODIGO.HeaderText = "Codigo";
-            this.CODIGO.Name = "CODIGO";
-            this.CODIGO.ReadOnly = true;
-            // 
-            // Produto
-            // 
-            this.Produto.DataPropertyName = "PRD_PRODUTO";
-            this.Produto.HeaderText = "Produto";
-            this.Produto.Name = "Produto";
-            this.Produto.ReadOnly = true;
-            // 
-            // Vlr_Compra
-            // 
-            this.Vlr_Compra.DataPropertyName = "PRD_VLRCOMPRA";
-            this.Vlr_Compra.HeaderText = "Valor de Compra";
-            this.Vlr_Compra.Name = "Vlr_Compra";
-            this.Vlr_Compra.ReadOnly = true;
-            // 
-            // vlr_venda
-            // 
-            this.vlr_venda.DataPropertyName = "PRD_VLRVENDA";
-            this.vlr_venda.HeaderText = "Valor de Venda";
-            this.vlr_venda.Name = "vlr_venda";
-            this.vlr_venda.ReadOnly = true;
-            // 
-            // quantidade
-            // 
-            this.quantidade.DataPropertyName = "PRD_QUANTIDADE";
-            this.quantidade.HeaderText = "Quantidade";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            // 
-            // categoria
-            // 
-            this.categoria.DataPropertyName = "PRD_CATEGORIA";
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.DataPropertyName = "PRD_DESCRICAO";
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            // 
-            // dataCompra
-            // 
-            this.dataCompra.DataPropertyName = "PRD_DATACOMPRA";
-            this.dataCompra.HeaderText = "Data da Compra";
-            this.dataCompra.Name = "dataCompra";
-            this.dataCompra.ReadOnly = true;
             // 
             // panel1
             // 
@@ -287,6 +235,99 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Produtos em Estoque:";
             // 
+            // CODIGO
+            // 
+            this.CODIGO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CODIGO.DataPropertyName = "PRD_CODIGO";
+            this.CODIGO.Frozen = true;
+            this.CODIGO.HeaderText = "Codigo";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
+            this.CODIGO.Width = 125;
+            // 
+            // Produto
+            // 
+            this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Produto.DataPropertyName = "PRD_PRODUTO";
+            this.Produto.Frozen = true;
+            this.Produto.HeaderText = "Produto";
+            this.Produto.Name = "Produto";
+            this.Produto.ReadOnly = true;
+            this.Produto.Width = 125;
+            // 
+            // Vlr_Compra
+            // 
+            this.Vlr_Compra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Vlr_Compra.DataPropertyName = "PRD_VLRCOMPRA";
+            this.Vlr_Compra.Frozen = true;
+            this.Vlr_Compra.HeaderText = "Valor de Compra";
+            this.Vlr_Compra.Name = "Vlr_Compra";
+            this.Vlr_Compra.ReadOnly = true;
+            this.Vlr_Compra.Width = 125;
+            // 
+            // vlr_venda
+            // 
+            this.vlr_venda.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.vlr_venda.DataPropertyName = "PRD_VLRVENDA";
+            this.vlr_venda.Frozen = true;
+            this.vlr_venda.HeaderText = "Valor de Venda";
+            this.vlr_venda.Name = "vlr_venda";
+            this.vlr_venda.ReadOnly = true;
+            this.vlr_venda.Width = 125;
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quantidade.DataPropertyName = "PRD_QUANTIDADE";
+            this.quantidade.Frozen = true;
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 124;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.categoria.DataPropertyName = "PRD_CATEGORIA";
+            this.categoria.Frozen = true;
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            this.categoria.Width = 125;
+            // 
+            // descricao
+            // 
+            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.descricao.DataPropertyName = "PRD_DESCRICAO";
+            this.descricao.Frozen = true;
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Width = 125;
+            // 
+            // dataCompra
+            // 
+            this.dataCompra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataCompra.DataPropertyName = "PRD_DATACOMPRA";
+            this.dataCompra.Frozen = true;
+            this.dataCompra.HeaderText = "Data da Compra";
+            this.dataCompra.Name = "dataCompra";
+            this.dataCompra.ReadOnly = true;
+            this.dataCompra.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataCompra.Width = 125;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btnAlterar.DataPropertyName = "Alterar";
+            this.btnAlterar.Frozen = true;
+            this.btnAlterar.HeaderText = "Alterar";
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.ReadOnly = true;
+            this.btnAlterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnAlterar.Width = 125;
+            // 
             // Controle_de_Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +358,9 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView gridEstoque;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vlr_Compra;
@@ -325,8 +369,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCompra;
-        private System.Windows.Forms.DataGridView gridEstoque;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewImageColumn btnAlterar;
     }
 }
