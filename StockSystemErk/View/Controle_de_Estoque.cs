@@ -78,13 +78,29 @@ namespace StockSystemErk.View
 
         private void gridEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int row;
+            int row, colum;
+            String value;
+
+            colum = e.ColumnIndex;
             row = e.RowIndex;
+            value = gridEstoque.Rows[row].Cells[2].Value.ToString();
+           
 
-          String value=  gridEstoque.Rows[row].Cells[1].Value.ToString();
+            switch (colum)
+            {
+                case 0:
+                        CarregarPainelAlterar(value);
+                        painelAlterar.Visible = true;
+                    break;
+                case 1:
 
-            CarregarPainelAlterar(value);
-            painelAlterar.Visible = true;
+                    break;
+
+            }
+
+         
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
