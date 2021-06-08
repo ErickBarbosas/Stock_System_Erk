@@ -9,8 +9,14 @@ namespace StockSystemErk.Objetos
 {
    class ObjNovoProduto
     {
-        string _produto,_valorComprado,_dataCompra, _valorVenda, _categoria, _descricao, _quantidade;
+        string _produto,_valorComprado,_dataCompra, _valorVenda, _categoria, _descricao, _quantidade,_codigo;
 
+
+        public string codigo
+        {
+            get { return _codigo; }
+            set { _codigo = value; }
+        }
         public string produto
         {
             get { return _produto; }

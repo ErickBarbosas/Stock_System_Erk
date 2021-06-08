@@ -18,7 +18,43 @@ namespace StockSystemErk.DAL
         
         string Comand = "";
 
+        public void AlterarProdutoEstoque(ObjNovoProduto obj)
+        {  
+            try
+            {
+                Comand = "UPDATE TB_PRODUTOS " +
+                        "SET PRD_PRODUTO = @PRODUTO, " +
+                        "PRD_VLRCOMPRA = @VLRCOMPRA, " +
+                        "PRD_VLRVENDA = @VLRVENDA, " +
+                        "PRD_DESCRICAO = @DECRICAO, " +
+                        "PRD_QUANTIDADE = @QUANTIDADE, " +
+                        "PRD_DATACOMPRA = @DATACOMPRA " +
+                        "WHERE PRD_CODIGO = @CODIGO";
 
+                Conn.Open();
+                cmd.Connection = Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.Add("@PRODUTO", OleDbType.VarChar).Value = obj.produto;
+                cmd.Parameters.Add("@VLRCOMPRA", OleDbType.Decimal).Value = obj.valorComprado;
+                cmd.Parameters.Add("@VLRVENDA", OleDbType.Decimal).Value = obj.valorVenda;
+                cmd.Parameters.Add("@DECRICAO", OleDbType.VarChar).Value = obj.descricao;
+                cmd.Parameters.Add("@QUANTIDADE", OleDbType.Integer).Value = obj.quantidade;
+                cmd.Parameters.Add("@DATACOMPRA", OleDbType.Date).Value = obj.dataCompra;
+                cmd.Parameters.Add("@CODIGO", OleDbType.Integer).Value = obj.codigo;
+
+                cmd.ExecuteNonQuery();
+
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
+            Conn.Close();
+
+        }
         public DataSet GetDadosProdutos(string codigo)
         {
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
@@ -56,6 +92,7 @@ namespace StockSystemErk.DAL
                 cmd.CommandText = Comand;
                 cmd.CommandType = CommandType.Text;
                 
+
                 da.Fill(tbProdutos);
             }
             catch

@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockSystemErk.View;
 using StockSystemErk.DAL;
+using StockSystemErk.Objetos;
 
 namespace StockSystemErk.View
 {
     public partial class Controle_de_Estoque : Form
     {
         AcessoBanco BD = new AcessoBanco();
+        ObjNovoProduto objProduto = new ObjNovoProduto();
 
         public Controle_de_Estoque()
         {
@@ -89,8 +91,10 @@ namespace StockSystemErk.View
             switch (colum)
             {
                 case 0:
-                        CarregarPainelAlterar(value);
-                        painelAlterar.Visible = true;
+                    painelAlterar.Visible = true;
+
+                    CarregarPainelAlterar(value);
+                      
                     break;
 
                 case 1:
@@ -118,9 +122,32 @@ namespace StockSystemErk.View
             return resposta;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void SetValorAlterar()
         {
-            painelAlterar.Visible = false;
+            objProduto.codigo = txtCodigo.Text;
+            objProduto.produto = txtproduto.Text;
+            objProduto.valorComprado = txtvalorProduto.Text;
+            objProduto.valorVenda = txtvalorVenda.Text;
+            objProduto.quantidade = txtQuantidade.Text;
+            objProduto.descricao = txtDescricao.Text;
+            objProduto.dataCompra = txtdatacompra.Text;
+        }
+
+        public void AlterarDadosProduto()
+        {
+            try
+            {
+                SetValorAlterar();
+                BD.AlterarProdutoEstoque(objProduto);
+            }
+            catch(Exception ex)
+            {
+            }
+        }
+
+        private void btnAlterarPRD_Click(object sender, EventArgs e)
+        {
+            AlterarDadosProduto();
         }
     }
 }
