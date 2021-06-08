@@ -122,6 +122,11 @@ namespace StockSystemErk.View
             return resposta;
         }
 
+        public void Message(string msg, string titulo)
+        {
+            MessageBox.Show(msg, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+        }
+
         public void SetValorAlterar()
         {
             objProduto.codigo = txtCodigo.Text;
@@ -139,15 +144,24 @@ namespace StockSystemErk.View
             {
                 SetValorAlterar();
                 BD.AlterarProdutoEstoque(objProduto);
+                Message("Produto Alterado Com Sucesso!", "Exito");
+                painelAlterar.Visible = false;
+                CarregaGridProdutos();
             }
             catch(Exception ex)
             {
             }
         }
 
+
         private void btnAlterarPRD_Click(object sender, EventArgs e)
         {
             AlterarDadosProduto();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            painelAlterar.Visible = false;
         }
     }
 }
