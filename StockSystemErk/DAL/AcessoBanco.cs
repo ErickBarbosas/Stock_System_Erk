@@ -14,12 +14,11 @@ namespace StockSystemErk.DAL
     {
         private static string StringConexao = StockSystemErk.Properties.Settings.Default.ConexaoBD.ToString();
         OleDbConnection Conn = new OleDbConnection(StringConexao);
-        OleDbCommand cmd = new OleDbCommand();
-        
         string Comand = "";
 
         public void AlterarProdutoEstoque(ObjNovoProduto obj)
-        {  
+        {
+            OleDbCommand cmd = new OleDbCommand();
             try
             {
                 Comand = "UPDATE TB_PRODUTOS " +
@@ -57,6 +56,7 @@ namespace StockSystemErk.DAL
         }
         public DataSet GetDadosProdutos(string codigo)
         {
+            OleDbCommand cmd = new OleDbCommand();
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataSet ds = new DataSet();
             try
@@ -79,6 +79,7 @@ namespace StockSystemErk.DAL
 
         public DataTable CarregaGridEstoque()
         {
+            OleDbCommand cmd = new OleDbCommand();
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataTable tbProdutos = new DataTable();
 
@@ -104,6 +105,7 @@ namespace StockSystemErk.DAL
 
         public DataTable PesquisarProduto(string pesquisa)
         {
+            OleDbCommand cmd = new OleDbCommand();
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataTable produto = new DataTable();
 
@@ -126,6 +128,7 @@ namespace StockSystemErk.DAL
         }
         public void InserirNovoProduto(ObjNovoProduto prd)
         {
+            OleDbCommand cmd = new OleDbCommand();
             try
             {
 
