@@ -156,7 +156,15 @@ namespace StockSystemErk.View
 
         private void btnAlterarPRD_Click(object sender, EventArgs e)
         {
-            AlterarDadosProduto();
+
+            DialogResult res;
+            res = MessageBoxConfirmacao("Deseja Realmente Alterar Esse Produto do Estoque ?", "Confimação");
+
+            if (res.ToString().ToUpper() == "YES")
+            {
+                AlterarDadosProduto();
+            }
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
