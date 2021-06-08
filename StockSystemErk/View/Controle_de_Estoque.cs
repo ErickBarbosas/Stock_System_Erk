@@ -94,11 +94,11 @@ namespace StockSystemErk.View
                     break;
 
                 case 1:
-                    DialogResult confirm;
-                    confirm= MessageBox.Show("Deseja Realmente Apagar Esse Produto do Estoque ?","Confimação",MessageBoxButtons.YesNo
-                        ,MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button2);
 
-                    if (confirm.ToString().ToUpper() == "YES")
+                    DialogResult res;
+                    res=MessageBoxConfirmacao("Deseja Realmente Apagar Esse Produto do Estoque ?", "Confimação");
+
+                    if (res.ToString().ToUpper() == "YES")
                     { }
 
                     break;
@@ -108,7 +108,15 @@ namespace StockSystemErk.View
         }
 
 
-        
+        public DialogResult MessageBoxConfirmacao(string msg,string titulo)
+        {
+            DialogResult resposta;
+
+            resposta = MessageBox.Show(msg, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+
+
+            return resposta;
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
