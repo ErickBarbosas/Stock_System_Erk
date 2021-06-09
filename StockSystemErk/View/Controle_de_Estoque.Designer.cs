@@ -106,7 +106,7 @@
             this.btnCadastraProduto.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
             this.btnCadastraProduto.FlatAppearance.BorderSize = 50;
             this.btnCadastraProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.btnCadastraProduto.Location = new System.Drawing.Point(994, 79);
+            this.btnCadastraProduto.Location = new System.Drawing.Point(994, 101);
             this.btnCadastraProduto.Name = "btnCadastraProduto";
             this.btnCadastraProduto.Size = new System.Drawing.Size(132, 32);
             this.btnCadastraProduto.TabIndex = 4;
@@ -119,7 +119,7 @@
             this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPesquisar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPesquisar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtPesquisar.Location = new System.Drawing.Point(838, 86);
+            this.txtPesquisar.Location = new System.Drawing.Point(838, 108);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(142, 20);
             this.txtPesquisar.TabIndex = 5;
@@ -127,7 +127,7 @@
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(3, 79);
+            this.btnAtualizar.Location = new System.Drawing.Point(3, 101);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(59, 32);
             this.btnAtualizar.TabIndex = 7;
@@ -146,7 +146,7 @@
             this.btnPesquisar.FlatAppearance.BorderSize = 0;
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(967, 86);
+            this.btnPesquisar.Location = new System.Drawing.Point(967, 107);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(21, 21);
             this.btnPesquisar.TabIndex = 0;
@@ -159,8 +159,10 @@
             this.gridEstoque.AllowUserToAddRows = false;
             this.gridEstoque.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.gridEstoque.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -175,8 +177,8 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -200,15 +202,16 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridEstoque.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridEstoque.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gridEstoque.Location = new System.Drawing.Point(3, 117);
+            this.gridEstoque.Location = new System.Drawing.Point(3, 146);
             this.gridEstoque.Name = "gridEstoque";
             this.gridEstoque.ReadOnly = true;
+            this.gridEstoque.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridEstoque.RowHeadersVisible = false;
@@ -217,7 +220,7 @@
             this.gridEstoque.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gridEstoque.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.gridEstoque.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gridEstoque.Size = new System.Drawing.Size(1126, 288);
+            this.gridEstoque.Size = new System.Drawing.Size(1126, 259);
             this.gridEstoque.TabIndex = 0;
             this.gridEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEstoque_CellContentClick);
             // 
@@ -307,7 +310,7 @@
             // painelAlterar
             // 
             this.painelAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.painelAlterar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.painelAlterar.BackColor = System.Drawing.SystemColors.Highlight;
             this.painelAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.painelAlterar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.painelAlterar.Controls.Add(this.btnCancelar);
@@ -316,7 +319,7 @@
             this.painelAlterar.Location = new System.Drawing.Point(254, 47);
             this.painelAlterar.Name = "painelAlterar";
             this.painelAlterar.Size = new System.Drawing.Size(639, 327);
-            this.painelAlterar.TabIndex = 8;
+            this.painelAlterar.TabIndex = 9999;
             // 
             // btnCancelar
             // 
@@ -524,6 +527,7 @@
             // 
             // subPainelAlterar
             // 
+            this.subPainelAlterar.BackColor = System.Drawing.SystemColors.Highlight;
             this.subPainelAlterar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subPainelAlterar.Controls.Add(this.txtCodigo);
             this.subPainelAlterar.Controls.Add(this.label3);
