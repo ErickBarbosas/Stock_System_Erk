@@ -61,7 +61,7 @@ namespace StockSystemErk.View
         {
             string pesquisa;
             DataTable dt;
-            pesquisa = textBox2.Text;
+            pesquisa = txtPesquisar.Text;
 
             dt = BD.PesquisarProduto(pesquisa);
 
