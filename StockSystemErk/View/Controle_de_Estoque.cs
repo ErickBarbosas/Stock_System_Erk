@@ -15,7 +15,7 @@ namespace StockSystemErk.View
 {
     public partial class Controle_de_Estoque : Form
     {
-        AcessoBanco BD = new AcessoBanco();
+        AcessoBanco BDacesso = new AcessoBanco();
         ObjNovoProduto objProduto = new ObjNovoProduto();
 
         public Controle_de_Estoque()
@@ -23,7 +23,7 @@ namespace StockSystemErk.View
             InitializeComponent();
             CarregaGridProdutos();
             painelAlterar.Visible = false;
-            BD.ContadorEstoque();
+           
         }
 
         private void btnCadastraProduto_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace StockSystemErk.View
         {
             DataSet ds;
 
-            ds = BD.GetDadosProdutos(codigo);
+            ds = BDacesso.GetDadosProdutos(codigo);
 
             txtCodigo.Text = ds.Tables[0].Rows[0][0].ToString(); 
             txtproduto.Text = ds.Tables[0].Rows[0][1].ToString();
@@ -52,9 +52,21 @@ namespace StockSystemErk.View
         public void CarregaGridProdutos()
         {
             DataTable dt;
-            dt = BD.CarregaGridEstoque();
+            dt = BDacesso.CarregaGridEstoque();
 
             gridEstoque.DataSource = dt;
+        }
+
+        public void CarregarContadores()
+        {
+            DataSet ds = new DataSet();
+
+            ds=BDacesso.ContadorEstoque();
+
+            txtTotalProduto.Text = ds.Tables[0].Rows[0][0].ToString();
+            txtQtdTotal.Text = ds.Tables[0].Rows[0][1].ToString();
+            txtMenor5.Text = ds.Tables[0].Rows[0][2].ToString();
+
         }
 
 
@@ -64,7 +76,7 @@ namespace StockSystemErk.View
             DataTable dt;
             pesquisa = txtPesquisar.Text;
 
-            dt = BD.PesquisarProduto(pesquisa);
+            dt = BDacesso.PesquisarProduto(pesquisa);
 
             gridEstoque.DataSource = dt;
         }
@@ -144,7 +156,7 @@ namespace StockSystemErk.View
             try
             {
                 SetValorAlterar();
-                BD.AlterarProdutoEstoque(objProduto);
+                BDacesso.AlterarProdutoEstoque(objProduto);
                 Message("Produto Alterado Com Sucesso!", "Exito");
                 painelAlterar.Visible = false;
                 CarregaGridProdutos();

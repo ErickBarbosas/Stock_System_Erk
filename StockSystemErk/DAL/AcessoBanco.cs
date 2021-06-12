@@ -16,7 +16,7 @@ namespace StockSystemErk.DAL
         OleDbConnection Conn = new OleDbConnection(StringConexao);
         string Comand = "";
 
-        public void ContadorEstoque()
+        public DataSet ContadorEstoque()
         {
             OleDbCommand cmd = new OleDbCommand();
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
@@ -35,12 +35,14 @@ namespace StockSystemErk.DAL
                 cmd.CommandType = CommandType.Text;
 
                 da.Fill(ds, "DADOS");
+                return ds;
             }
             catch (Exception ex)
             {
-
-                throw;
+                return null;
             }
+
+            
 
 
         }
