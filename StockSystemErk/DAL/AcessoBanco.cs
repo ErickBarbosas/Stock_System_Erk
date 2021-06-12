@@ -22,7 +22,10 @@ namespace StockSystemErk.DAL
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataSet ds = new DataSet();
 
-            Comand = "SELECT COUNT(0) ,SUM(PRD_QUANTIDADE) FROM TB_PRODUTOS";
+            Comand = "SELECT COUNT(0), " +
+                        "SUM(PRD_QUANTIDADE), " +
+                        "SUM(IIF(PRD_QUANTIDADE <=5,1,0))" +
+                   "  FROM TB_PRODUTOS";
 
             try
             {
@@ -33,7 +36,7 @@ namespace StockSystemErk.DAL
 
                 da.Fill(ds, "DADOS");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
