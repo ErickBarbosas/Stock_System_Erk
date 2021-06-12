@@ -21,9 +21,14 @@ namespace StockSystemErk.View
         public Controle_de_Estoque()
         {
             InitializeComponent();
+            CarregarConteudo();
+        }
+
+        public void CarregarConteudo()
+        {
             CarregaGridProdutos();
+            CarregarContadores();
             painelAlterar.Visible = false;
-           
         }
 
         private void btnCadastraProduto_Click(object sender, EventArgs e)
