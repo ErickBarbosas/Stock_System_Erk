@@ -16,6 +16,31 @@ namespace StockSystemErk.DAL
         OleDbConnection Conn = new OleDbConnection(StringConexao);
         string Comand = "";
 
+        public void ContadorEstoque()
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet();
+
+            Comand = "SELECT COUNT(0) ,SUM(PRD_QUANTIDADE) FROM TB_PRODUTOS";
+
+            try
+            {
+                Conn.Open();
+                cmd.Connection = Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
+
+                da.Fill(ds, "DADOS");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+        }
         public void AlterarProdutoEstoque(ObjNovoProduto obj)
         {
             OleDbCommand cmd = new OleDbCommand();

@@ -23,6 +23,7 @@ namespace StockSystemErk.View
             InitializeComponent();
             CarregaGridProdutos();
             painelAlterar.Visible = false;
+            BD.ContadorEstoque();
         }
 
         private void btnCadastraProduto_Click(object sender, EventArgs e)
