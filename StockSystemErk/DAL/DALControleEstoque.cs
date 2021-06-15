@@ -46,7 +46,32 @@ namespace StockSystemErk.DAL
 
 
         }
-        public void AlterarProdutoEstoque(ObjNovoProduto obj)
+
+        public void AlterarProdutoEstoque(int codigo)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            try
+            {
+                Comand = "DELETE FROM TB_PRODUTO WHERE PRD_CODIGO = @CODIGO";
+
+                Conn.Open();
+                cmd.Connection = Conn;
+                cmd.CommandText = Comand;
+                cmd.CommandType = CommandType.Text;
+
+                cmd.Parameters.Add("@CODIGO", OleDbType.Integer).Value = obj.produto;
+              
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            Conn.Close();
+
+            public void AlterarProdutoEstoque(ObjNovoProduto obj)
         {
             OleDbCommand cmd = new OleDbCommand();
             try

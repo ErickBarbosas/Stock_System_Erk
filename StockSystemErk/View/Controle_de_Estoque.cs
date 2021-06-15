@@ -15,6 +15,7 @@ namespace StockSystemErk.View
 {
     public partial class Controle_de_Estoque : Form
     {
+        
         AcessoBanco BDacesso = new AcessoBanco();
         ObjNovoProduto objProduto = new ObjNovoProduto();
 
