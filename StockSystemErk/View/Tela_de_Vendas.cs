@@ -16,5 +16,7 @@ namespace StockSystemErk.View
         {
             InitializeComponent();
         }
+
+        
     }
 }
