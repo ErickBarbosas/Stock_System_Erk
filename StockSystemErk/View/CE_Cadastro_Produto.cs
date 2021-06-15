@@ -41,7 +41,7 @@ namespace StockSystemErk.View
 
         public void InserirNovoProduto()
         {
-            AcessoBanco dal = new AcessoBanco();
+            DALControleEstoque dal = new DALControleEstoque();
 
             SetProdutoNovo();
             dal.InserirNovoProduto(NewProdutoObj);

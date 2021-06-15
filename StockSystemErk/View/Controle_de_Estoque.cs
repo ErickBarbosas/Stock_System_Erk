@@ -15,10 +15,9 @@ namespace StockSystemErk.View
 {
     public partial class Controle_de_Estoque : Form
     {
-        
-        AcessoBanco BDacesso = new AcessoBanco();
+        DALControleEstoque BDacesso = new DALControleEstoque();
         ObjNovoProduto objProduto = new ObjNovoProduto();
-
+        
         public Controle_de_Estoque()
         {
             InitializeComponent();
@@ -122,7 +121,10 @@ namespace StockSystemErk.View
                     res=MessageBoxConfirmacao("Deseja Realmente Apagar Esse Produto do Estoque ?", "Confimação");
 
                     if (res.ToString().ToUpper() == "YES")
-                    { }
+                    {
+                        BDacesso.DeletarProduto(value);
+                        CarregaGridProdutos();
+                    }
 
                     break;
 
