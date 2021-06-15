@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\AcessoBanco.cs" />
+    <Compile Include="DAL\DALControleEstoque.cs" />
     <Compile Include="DAL\DALTelaVendascs.cs" />
     <Compile Include="Default.cs">
       <SubType>Form</SubType>
