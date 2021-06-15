@@ -95,11 +95,11 @@
             // txtTotalProduto
             // 
             this.txtTotalProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTotalProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalProduto.Location = new System.Drawing.Point(151, 426);
             this.txtTotalProduto.Name = "txtTotalProduto";
             this.txtTotalProduto.ReadOnly = true;
-            this.txtTotalProduto.Size = new System.Drawing.Size(100, 24);
+            this.txtTotalProduto.Size = new System.Drawing.Size(100, 20);
             this.txtTotalProduto.TabIndex = 2;
             this.txtTotalProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -512,11 +512,11 @@
             // txtQtdTotal
             // 
             this.txtQtdTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtQtdTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtdTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQtdTotal.Location = new System.Drawing.Point(591, 425);
             this.txtQtdTotal.Name = "txtQtdTotal";
             this.txtQtdTotal.ReadOnly = true;
-            this.txtQtdTotal.Size = new System.Drawing.Size(100, 24);
+            this.txtQtdTotal.Size = new System.Drawing.Size(100, 20);
             this.txtQtdTotal.TabIndex = 9;
             this.txtQtdTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -536,12 +536,12 @@
             // txtMenor5
             // 
             this.txtMenor5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMenor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMenor5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMenor5.ForeColor = System.Drawing.Color.Red;
             this.txtMenor5.Location = new System.Drawing.Point(994, 425);
             this.txtMenor5.Name = "txtMenor5";
             this.txtMenor5.ReadOnly = true;
-            this.txtMenor5.Size = new System.Drawing.Size(100, 24);
+            this.txtMenor5.Size = new System.Drawing.Size(100, 20);
             this.txtMenor5.TabIndex = 11;
             this.txtMenor5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
